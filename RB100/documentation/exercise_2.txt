@@ -1,0 +1,15 @@
+# exercise_2.txt
+
+
+[while-loop](https://ruby-doc.org/core-2.7.1/doc/syntax/control_expressions_rdoc.html#label-while+Loop)
+
+The while loop executes while a condition is true:
+
+a = 0
+
+while a < 10 do
+  p a
+  a += 1
+end
+
+p a

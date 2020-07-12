@@ -1,0 +1,14 @@
+# exercise_5.rb
+
+https://ruby-doc.org/core-2.7.1/doc/syntax/literals_rdoc.html#label-Numbers
+
+You can write integers of any size as follows:
+
+1234
+1_234
+100_000_000
+12_345
+
+These numbers have the same value, 1,234. The underscore may be
+used to enhance readability for humans. You may place an
+underscore anywhere in the number.

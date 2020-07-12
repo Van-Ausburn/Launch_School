@@ -1,0 +1,20 @@
+# exercise_6.txt
+
+https://ruby-doc.org/core-2.7.1/doc/syntax/literals_rdoc.html#label-Symbols
+
+
+Symbols¶ ↑
+A Symbol represents a name inside the ruby interpreter. See
+Symbol for more details on what symbols are and when ruby
+creates them internally.
+
+You may reference a symbol using a colon: :my_symbol.
+
+You may also create symbols by interpolation:
+
+:"my_symbol1"
+:"my_symbol#{1 + 1}"
+Like strings, a single-quote may be used to disable interpolation:
+
+:'my_symbol#{1 + 1}' #=> :"my_symbol\#{1 + 1}"
+When creating a Hash, there is a special syntax for referencing a Symbol as well.

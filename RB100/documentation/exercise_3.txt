@@ -1,0 +1,5 @@
+# exercise_3.txt
+
+[while-link](https://ruby-doc.org/core-2.7.1/doc/syntax/control_expressions_rdoc.html#label-while+Loop)
+
+The result of a while loop is nil unless break is used to supply a value.
