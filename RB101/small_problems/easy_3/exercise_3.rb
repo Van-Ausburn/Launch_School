@@ -1,52 +1,57 @@
 # exercise_3.rb
 
-# Write a program that prompts the user for
-# two positive integers, and then prints the
-# results of the following operations on those
-# two numbers: addition, subtraction, product,
-#  quotient, remainder, and power. Do not worry
-#  about validating the input.
+# Counting the Number of Characters
+# Write a program that will ask a user for an 
+# input of a word or multiple words and give 
+# back the number of characters. Spaces should 
+# not be counted as a character.
 
-# Example
+# input:
 
-# ==> Enter the first number:
-# 23
-# ==> Enter the second number:
-# 17
-# ==> 23 + 17 = 40
-# ==> 23 - 17 = 6
-# ==> 23 * 17 = 391
-# ==> 23 / 17 = 1
-# ==> 23 % 17 = 6
-# ==> 23 ** 17 = 141050039560662968926103
+# Please write word or multiple words: walk
+# output:
 
-# problem: Prompt user for two positive integers, and print the results of
-# addition, subtraction, multiplication, division, modulo and exponential
-# validation unneccessary.
+# There are 4 characters in "walk".
+# input:
 
-# examples:
+# Please write word or multiple words: walk, don't run
+# output:
 
-# input: user input Integer
+# There are 13 characters in "walk, don't run".
 
-# output: string, integers
+=begin
+Input: 
+Output: 
 
-# algo: Prompt user for 2 positive integer inputs
-# store in local variable
-# perform operationd +, -, *, /, %, and ** on the set of integers
-# put an interpolated string of answers to terminal
+Problem: 
+  -  Ask user for string input
+     Given a string or series of strings
+     Iterate through the string or strings
+     Count the number of characters in the string or strings
+     Spaces can not be counted
+
+Clarifying Questions: 
+  - 
+
+Data Structure: 
+  -  Array of strings
+
+Algorithm: 
+  -  Get input from user, ask for a string or strings
+*/ 
+
+//Code:
 
 
-puts "Enter the first non-zero number: "
+//Test Cases: 
 
-number_1 = gets.chomp.to_i
+=end
 
-puts "Enter the second non-zero number: "
+def prompt(message)
+  puts "==> #{message}"
+end
 
-number_2 = gets.chomp.to_i
-
-puts "==> #{number_1} + #{number_2} =  #{number_1 + number_2}"
-puts "==> #{number_1} - #{number_2} =  #{number_1 - number_2}"
-puts "==> #{number_1} * #{number_2} =  #{number_1 * number_2}"
-puts "==> #{number_1} / #{number_2} =  #{number_1 / number_2}"
-puts "==> #{number_1} % #{number_2} =  #{number_1 % number_2}"
-puts "==> #{number_1} ** #{number_2} =  #{number_1 ** number_2}"
+prompt("Please write a word or multiple words: ")
+string = gets.chomp.to_s
+number_characters = string.delete(' ').length
+prompt("There are #{number_characters} characters in \"#{string}\".")
