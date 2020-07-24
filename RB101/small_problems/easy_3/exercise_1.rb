@@ -34,3 +34,35 @@
 # ==> Enter the last number:
 # 18
 # The number 18 does not appear in [25, 15, 20, 17, 23].
+
+array_of_int = []
+
+puts "==> Enter the 1st number:"
+number1 = gets.chomp.to_i
+array_of_int << number1
+
+puts "==> Enter the 2nd number:"
+number2 = gets.chomp.to_i
+array_of_int << number2
+
+puts "==> Enter the 3rd number:"
+number3 = gets.chomp.to_i
+array_of_int << number3
+
+puts "==> Enter the 4th number:"
+number4 = gets.chomp.to_i
+array_of_int << number4
+
+puts "==> Enter the 5th number:"
+number5 = gets.chomp.to_i
+array_of_int << number5
+
+puts "==> Enter the 6th number:"
+number6 = gets.chomp.to_i
+
+
+if array_of_int.include?(number6)
+  puts "The number #{number6} appears in #{array_of_int}."
+else
+  puts "The number #{number6} does not appear in #{array_of_int}!"
+end
