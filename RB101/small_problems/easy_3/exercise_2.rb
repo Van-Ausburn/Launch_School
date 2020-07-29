@@ -1,87 +1,55 @@
-# value.rb
+# exercise_2.rb
 
-# ==> Enter the 1st number:
-# 25
-# ==> Enter the 2nd number:
-# 15
-# ==> Enter the 3rd number:
-# 20
-# ==> Enter the 4th number:
-# 17
-# ==> Enter the 5th number:
+# Write a program that prompts the user for
+# two positive integers, and then prints the
+# results of the following operations on those
+# two numbers: addition, subtraction, product,
+#  quotient, remainder, and power. Do not worry
+#  about validating the input.
+
+# Example
+
+# ==> Enter the first number:
 # 23
-# ==> Enter the last number:
+# ==> Enter the second number:
 # 17
-# The number 17 appears in [25, 15, 20, 17, 23].
+# ==> 23 + 17 = 40
+# ==> 23 - 17 = 6
+# ==> 23 * 17 = 391
+# ==> 23 / 17 = 1
+# ==> 23 % 17 = 6
+# ==> 23 ** 17 = 141050039560662968926103
 
+# problem: Prompt user for two positive integers, and print the results of
+# addition, subtraction, multiplication, division, modulo and exponential
+# validation unneccessary.
 
-# ==> Enter the 1st number:
-# 25
-# ==> Enter the 2nd number:
-# 15
-# ==> Enter the 3rd number:
-# 20
-# ==> Enter the 4th number:
-# 17
-# ==> Enter the 5th number:
-# 23
-# ==> Enter the last number:
-# 18
-# The number 18 does not appear in [25, 15, 20, 17, 23].
+# examples:
 
-# Write a program that solicits 6 numbers from the user,
-# then prints a message that describes whether or not the
-# 6th number appears amongst the first 5 numbers.
+# input: user input Integer
 
-# Examples:
+# output: string, integers
 
-# PEDAC
+# algo: Prompt user for 2 positive integer inputs
+# store in local variable
+# perform operationd +, -, *, /, %, and ** on the set of integers
+# put an interpolated string of answers to terminal
 
-# # They want six integer inputs and check if the 6th input matches
-# # the first 5.
-
-# Examples:
-
-# The number 17 appears in [25, 15, 20, 17, 23].
-
-# Data
-# Input: integer
-# Output: Array, integer String
-
-# Algo: Ask user for integer.
-#       Push integer input into Array
-#       Repeat 4 more times.
-#       Ask a 6th time for an integer.
-#       IF the 6th integer matches any of the first five, return a sentence that says, "The number 17 appears in []"
-
-
-
-array_of_int = []
-
-puts "==> Enter the 1st number:"
-number1 = gets.chomp.to_i
-array_of_int << number1
-
-puts "==> Enter the 2nd number:"
-number2 = gets.chomp.to_i
-array_of_int << number2
-
-puts "==> Enter the 3rd number:"
-number3 = gets.chomp.to_i
-array_of_int << number3
-
-puts "==> Enter the 4th number:"
-number4 = gets.chomp.to_i
-array_of_int << number4
-
-puts "==> Enter the 5th number:"
-number5 = gets.chomp.to_i
-array_of_int << number5
-
-puts "==> Enter the 6th number:"
-number6 = gets.chomp.to_i
-
-
-if array_of_int.include?(number6)
-  puts "The number #{number6} appears in #{array_of_int}."
+def prompt(message)
+  puts "==> #{message}"
 end
+
+prompt("Enter the first non-zero number: ")
+
+number_1 = gets.chomp.to_i
+
+prompt("Enter the second non-zero number: ")
+
+number_2 = gets.chomp.to_i
+
+prompt("#{number_1} + #{number_2} =  #{number_1 + number_2}")
+prompt("#{number_1} - #{number_2} =  #{number_1 - number_2}")
+prompt("#{number_1} * #{number_2} =  #{number_1 * number_2}")
+prompt("#{number_1} / #{number_2} =  #{number_1 / number_2}")
+prompt("#{number_1} % #{number_2} =  #{number_1 % number_2}")
+prompt("#{number_1} ** #{number_2} =  #{number_1 ** number_2}")
