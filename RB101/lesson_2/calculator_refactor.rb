@@ -1,4 +1,4 @@
-# calculator.rb
+# calculator_refactor.rb
 
 def prompt(message)
   Kernel.puts("=> #{message}")
