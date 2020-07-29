@@ -13,15 +13,15 @@ end
 
 prompt("Enter the first non-zero number: ")
 
-number_1 = gets.chomp.to_i
+number1 = gets.chomp.to_i
 
 prompt("Enter the second non-zero number: ")
 
-number_2 = gets.chomp.to_i
+number2 = gets.chomp.to_i
 
-prompt("#{number_1} + #{number_2} =  #{number_1 + number_2}")
-prompt("#{number_1} - #{number_2} =  #{number_1 - number_2}")
-prompt("#{number_1} * #{number_2} =  #{number_1 * number_2}")
-prompt("#{number_1} / #{number_2} =  #{number_1 / number_2}")
-prompt("#{number_1} % #{number_2} =  #{number_1 % number_2}")
-prompt("#{number_1} ** #{number_2} =  #{number_1 ** number_2}")
+prompt("#{number1} + #{number2} =  #{number1 + number2}")
+prompt("#{number1} - #{number2} =  #{number1 - number2}")
+prompt("#{number1} * #{number2} =  #{number1 * number2}")
+prompt("#{number1} / #{number2} =  #{number1 / number2}")
+prompt("#{number1} % #{number2} =  #{number1 % number2}")
+prompt("#{number1} ** #{number2} =  #{number1**number2}")
