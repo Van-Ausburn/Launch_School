@@ -7,34 +7,6 @@
 #  quotient, remainder, and power. Do not worry
 #  about validating the input.
 
-# Example
-
-# ==> Enter the first number:
-# 23
-# ==> Enter the second number:
-# 17
-# ==> 23 + 17 = 40
-# ==> 23 - 17 = 6
-# ==> 23 * 17 = 391
-# ==> 23 / 17 = 1
-# ==> 23 % 17 = 6
-# ==> 23 ** 17 = 141050039560662968926103
-
-# problem: Prompt user for two positive integers, and print the results of
-# addition, subtraction, multiplication, division, modulo and exponential
-# validation unneccessary.
-
-# examples:
-
-# input: user input Integer
-
-# output: string, integers
-
-# algo: Prompt user for 2 positive integer inputs
-# store in local variable
-# perform operationd +, -, *, /, %, and ** on the set of integers
-# put an interpolated string of answers to terminal
-
 def prompt(message)
   puts "==> #{message}"
 end
