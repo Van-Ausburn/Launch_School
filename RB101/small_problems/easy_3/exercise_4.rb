@@ -1,7 +1,7 @@
 # exercise_4.rb
 
 # Multiplying Two Numbers
-# Create a method that takes two arguments, 
+# Create a method that takes two arguments,
 # multiplies them together, and returns the result.
 
 # Example:
@@ -12,4 +12,5 @@ def multiply(num1, num2)
   num1 * num2
 end
 
-p multiply(3, 3)
+puts multiply(3, 3)
+puts multiply(4, 12)
