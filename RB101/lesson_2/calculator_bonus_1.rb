@@ -102,3 +102,10 @@ loop do # main loop
 end
 
 prompt("Thank you for using the calculator!")
+
+# Henrys-iMac:~/Environments/Ruby/Launch_School/RB101/lesson_2$ rubocop calculator_bonus_1.rb
+# For more information: https://docs.rubocop.org/rubocop/versioning.html
+# Inspecting 1 file
+# .
+
+# 1 file inspected, no offenses detected
