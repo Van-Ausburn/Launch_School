@@ -4,8 +4,8 @@ def prompt(message)
   Kernel.puts("=> #{message}")
 end
 
-def valid_number?(obj)
-  /\A[+-]?\d+(\.[\d]+)?\z/.match(obj) #   https://regexr.com/59clv
+def valid_number?(number)
+  /\A[+-]?\d+(\.[\d]+)?\z/.match(number) #   https://regexr.com/59clv
 end
 
 def operation_to_message(op)
