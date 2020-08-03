@@ -3,6 +3,8 @@ require 'yaml'
 MESSAGES = YAML.safe_load(File.read("prompt.yml"))
 
 LANGUAGE = 'en'
+# LANGUAGE = 'es'
+# LANGUAGE = 'nl'
 
 def messages(message, lang='en')
   MESSAGES[lang][message]
