@@ -1,0 +1,14 @@
+en:
+  welcome: "Welcome to the loan calculator. Enter your name:"
+  valid_name: "Make sure to enter a valid name"
+  greeting: "=> Hello %{name}!"
+  loan_amount: "Enter the loan amount:"
+  valid_number: "Please enter a valid loan amount:"
+  apr_rate: "Please enter the annual percentage rate. Whole number, 15 for 15%:"
+  valid_apr: "Please a valid annual pecentage rate, 15 for 15%:"
+  loan_years: "What will be the term for the loan? Enter a whole number:"
+  valid_years: "Please enter a valid number of years for the loan:"
+  monthly_payment: "=> Your monthly payment is $%{monthly_payment}"
+  loan_statement: "=> On a %{years} year loan in the amount of $%{loan_amount}0"
+  another: "Do you want to perform another calculation? (Y to calculate again)"
+
