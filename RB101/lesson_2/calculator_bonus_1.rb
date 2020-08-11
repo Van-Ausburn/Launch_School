@@ -5,7 +5,7 @@ def prompt(message)
 end
 
 def valid_number?(number)
-  /\A[+-]?\d+(\.[\d]+)?\z/.match(number) #   https://regexr.com/59clv
+  !!/\A[+-]?\d*\.?(\.?[\d]+)?\z/.match(number) #   https://regexr.com/59clv
 end
 
 def operation_to_message(op)
@@ -85,15 +85,15 @@ loop do # main loop
 
   result = case operator
            when '1'
-             number1.to_i() + number2.to_i()
+             number1.to_f() + number2.to_f()
            when '2'
-             number1.to_i() - number2.to_i()
+             number1.to_f() - number2.to_f()
            when '3'
-             number1.to_i() * number2.to_i()
+             number1.to_f() * number2.to_f()
            when '4'
              number1.to_f() / number2.to_f()
            end
-  prompt("The result is #{result.round(2)}")
+  prompt("The result is #{result}")
 
   prompt("Do you want to perform another calculation? (Y to run\
  calculator again):")
@@ -102,10 +102,3 @@ loop do # main loop
 end
 
 prompt("Thank you for using the calculator!")
-
-# Henrys-iMac:~/Environments/Ruby/Launch_School/RB101/lesson_2$ rubocop calculator_bonus_1.rb
-# For more information: https://docs.rubocop.org/rubocop/versioning.html
-# Inspecting 1 file
-# .
-
-# 1 file inspected, no offenses detected
