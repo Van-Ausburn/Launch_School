@@ -1,6 +1,8 @@
 # even_odd.rb
 
-# Write a loop that prints numbers 1-5 and whether the number is even or odd. Use the code below to get started.
+# Write a loop that prints numbers 1-5 and
+# whether the number is even or odd. Use the
+# code below to get started.
 
 # count = 1
 
@@ -12,18 +14,13 @@
 
 count = 1
 
-# loop do
-#   if count.odd?
-#     puts "#{count} is odd!"
-#   else
-#     puts "#{count} is even!"
-#   end
-#   break if count == 5
-#   count += 1
-# end
-
 loop do
-  number = rand(100)
-  puts number
-  break if number.between?(0, 10)
+  if count.odd?
+    puts "#{count} is odd!"
+  else
+    puts "#{count} is even!"
+  end
+  break if count == 5
+  count += 1
 end
+
