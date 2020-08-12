@@ -1,50 +1,64 @@
 en:
-  welcome: "Welcome to the Calculator. Enter your name: "
+  welcome: "Welcome to the Calculator \n=> Enter your name: "
+  greeting: '=> Hello %{name}'
   valid_name: "Make sure to enter a valid name"
   input_one: "What's the first number?"
   input_two: "What's the second number?"
   valid_number: "Hmm... that doesn't look like a valid number"
   choice: "Enter a valid operator!( 1 2 3 or 4)"
-  another: "Do you want to perform another calculation? (Y to calculate again)"
+  message: "%{value} The two numbers..."
+  another: "Do you want to perform another calculation?\n=> (Y to calculate again)"
   thanks: "Thank you for using the calculator. Good bye!"
-  operator_prompt: "What operation would you like to perform?
-    1) add
-    2) subtract
-    3) multiply
-    4) divide"
+  operator_prompt: "What operation would you like to perform? \n
+    1) add \n
+    2) subtract \n
+    3) multiply \n
+    4) divide \n"
   two_nums: "the two numbers"
   result: "The result is"
+  adding: "Adding"
+  subtracting: "Subtracting"
+  multiplying: "Multiplying"
+  dividing: "Dividing"
 
 nl:
-  welcome: "Welkom. Zet jouw naam."
-  valid_name: "zet een geldige naam"
+  welcome: "Welkom bij de rekenmachine.\n=> Vul uw naam in?."
+  greeting: "=> Hallo %{name}"
+  valid_name: "Zorg ervoor dat u een geldige naam invoert: "
   input_one: "Wat is het eerste nummer?"
   input_two: "Wat is het tweede nummer?"
   valid_number: "Hmm.. dat is geen geldige nummer"
   choice: "Je heb 1, 2, 3, or 4 nodig"
+  message: "%{value} de twee cijfers..."
   another: "Wil je nog een berekening?"
   thanks: "Bedankt voor de calculator aan het gebruik. Dag!"
-  operator_prompt: "Welke berekening je nodig?
-    1) optellen
-    2) aftrekken
-    3) vermenigvuldigen
-    4) verdelen"
+  operator_prompt: "Welke berekening je nodig? \n
+    1) optellen \n
+    2) aftrekken \n
+    3) vermenigvuldigen \n
+    4) verdelen: "
   two_nums: "het twee nummers"
   result: "Het resultaat is"
 
 es:
-  welcome: "Bienvenido a la calculadora. Introduzca su nombre"
+  welcome: "Bienvenido a la calculadora.\n=> Introduzca su nombre"
+  greeting: "=> Hola %{name}"
   valid_name: "Asegúrese de ingresar un nombre válido"
   input_one: "Cual es el primer numero?"
   input_two: "Cual es el segundo numero?"
   valid_number: "Hmm ... eso no parece un número válido"
   choice: "¡Ingrese un operador válido! (1 2 3 o 4)"
+  message: "%{value} los dos números..."
   another: "¿Quieres realizar otro cálculo? (Y para calcular de nuevo)"
   thanks: "Gracias por usar la calculadora. ¡Adiós!"
-  operator_prompt: "¿Qué operación te gustaría realizar?
-    1) Añadir
-    2) sustraer
-    3) multiplicar
-    4) dividir"
+  operator_prompt: "¿Qué operación te gustaría realizar? \n
+    1) Añadir \n
+    2) sustraer \n
+    3) multiplicar \n
+    4) dividir \n"
   two_nums: "het twee nummers"
   result: "Het resultaat is"
+  adding: "Agregando"
+  subtracting: "Restando"
+  multiplying: "Multiplicando"
+  dividing: "Dividiendo"

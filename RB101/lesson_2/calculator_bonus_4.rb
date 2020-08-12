@@ -1,36 +1,41 @@
 require 'yaml'
 
-MESSAGES = YAML.safe_load(File.read("prompt.yml"))
+MESSAGES = YAML::load(File.read("prompt.yml"))
 
 LANGUAGE = 'en'
-# LANGUAGE = 'es'
 # LANGUAGE = 'nl'
+# LANGUAGE = 'es'
 
-def messages(message, lang='en')
+def messages(message, lang = LANGUAGE)
   MESSAGES[lang][message]
 end
 
-def prompt(key)
+def prompt(key, value=nil)
   message = messages(key, LANGUAGE)
-  Kernel.puts("=> #{message}")
+  if value
+    variable_message = message % { value: value }
+    Kernel.puts("=> #{variable_message}")
+  else
+    Kernel.puts("=> #{message}")
+  end
 end
 
-# https://medium.com/launch-school/number-validation-with-regex-ruby-393954e46797
+# https://m\edium.com/launch-school/number-validation-with-regex-ruby-393954e46797
 def valid_number?(number)
   number = number.to_s unless number.is_a? String
   /\A[+-]?\d*\.?(\.?[\d]+)?\z/.match(number) # regexr.com/59clv
-end
+  end
 
-def operation_to_message(op)
+def operation_to_message(op, lang)
   operation = case op
               when '1'
-                'Adding'
+                MESSAGES[lang]['adding']
               when '2'
-                'Subtracting'
+                MESSAGES[lang]['subtracting']
               when '3'
-                'Multiplying'
+                MESSAGES[lang]['multiplying']
               when '4'
-                'Dividing'
+                MESSAGES[lang]['dividing']
               end
 
   operation
@@ -41,13 +46,13 @@ prompt('welcome')
 name = ''
 loop do
   name = Kernel.gets().chomp()
-  if name.empty?
+  if /[0-9\W\_]+/.match(name) || name.empty?
     prompt('valid_name')
   else
+    puts format(messages('greeting'), name: name)
     break
   end
 end
-puts "=> Hello #{name}"
 
 loop do # main loop
   number1 = ''
@@ -87,7 +92,7 @@ loop do # main loop
     end
   end
 
-  prompt("#{operation_to_message(operator)} the two numbers...")
+  prompt('message', operation_to_message(operator, LANGUAGE))
 
   result = case operator
            when '1'
@@ -101,7 +106,7 @@ loop do # main loop
            end
   prompt('result')
 
-  puts result.round(4) if valid_number?(result)
+  puts "=> #{result.round(4)}" if valid_number?(result)
 
   prompt('another')
   answer = Kernel.gets().chomp()
