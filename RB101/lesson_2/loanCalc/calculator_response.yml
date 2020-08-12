@@ -1,5 +1,5 @@
 en:
-  welcome: "Welcome to the loan calculator. Enter your name:"
+  welcome: "Welcome to the loan calculator.\n=> Enter your name:"
   valid_name: "Make sure to enter a valid name"
   greeting: "=> Hello %{name}!"
   loan_amount: "Enter the loan amount:"
@@ -10,5 +10,5 @@ en:
   valid_years: "Please enter a valid number of years for the loan:"
   monthly_payment: "=> Your monthly payment is $%{monthly_payment}"
   loan_statement: "=> On a %{years} year loan in the amount of $%{loan_amount}0"
-  another: "Do you want to perform another calculation? (Y to calculate again)"
+  another: "Do you want to perform another calculation?\n=> (Y to calculate again)"
 
