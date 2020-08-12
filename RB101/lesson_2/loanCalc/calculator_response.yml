@@ -11,4 +11,3 @@ en:
   monthly_payment: "=> Your monthly payment is $%{monthly_payment}"
   loan_statement: "=> On a %{years} year loan in the amount of $%{loan_amount}0"
   another: "Do you want to perform another calculation?\n=> (Y to calculate again)"
-
