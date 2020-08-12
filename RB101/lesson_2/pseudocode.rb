@@ -1,8 +1,10 @@
 # pseudocode.rb
 
 # 1) a method that returns the sum of two integers
-# 2) a method that takes an array of strings, and returns a string that is all those strings concatenated together
-# 3) a method that takes an array of integers, and returns a new array with every other element
+# 2) a method that takes an array of strings, and returns a string that
+#    is all those strings concatenated together
+# 3) a method that takes an array of integers, and returns a new array
+#    with every other element
 # No need to code here, just practice writing logic out in English.
 
 # Exercise_1
@@ -20,10 +22,12 @@
 # p sum(5, 12) == 17
 
 # Exercise_2
-# 1) an array of strings as an argument are passed into the method concat_string(string)
+# 1) an array of strings as an argument are passed into the method
+#    concat_string(string)
 # 2) the argument array is assigned to local variable string_array
-# 3) concatenate the string_array elements with Array#join method with a space as a seperator
-# test method
+# 3) concatenate the string_array elements with Array#join method
+#    with a space as a seperator
+# 4) test method
 
 # def concat_string(string_array)
 #   string_array.join(' ')
@@ -43,15 +47,15 @@
 # 9) return odds array
 # 10) test method
 
-def every_other(int_array)
-  index = 0
-  odds = []
-  while index < int_array.size
-    odds << int_array[index]
-    index += 2
-  end
-  odds
-end
+# def every_other(int_array)
+#   index = 0
+#   odds = []
+#   while index < int_array.size
+#     odds << int_array[index]
+#     index += 2
+#   end
+#   odds
+# end
 
-p every_other([2, 3, 4, 5, 6, 7, 8, 9, 10]) == [2, 4, 6, 8, 10]
-p every_other([3, 4])
+# p every_other([2, 3, 4, 5, 6, 7, 8, 9, 10]) == [2, 4, 6, 8, 10]
+# p every_other([3, 4])
