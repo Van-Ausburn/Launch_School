@@ -13,18 +13,17 @@ end
 def prompt(key, value=nil)
   message = messages(key, LANGUAGE)
   if value
-    variable_message = message % { value: value }
+    variable_message = message % ({ value: value })
     Kernel.puts("=> #{variable_message}")
   else
     Kernel.puts("=> #{message}")
   end
 end
 
-# https://m\edium.com/launch-school/number-validation-with-regex-ruby-393954e46797
 def valid_number?(number)
   number = number.to_s unless number.is_a? String
   /\A[+-]?\d*\.?(\.?[\d]+)?\z/.match(number) # regexr.com/59clv
-  end
+end
 
 def operation_to_message(op, lang)
   operation = case op
