@@ -1,61 +1,11 @@
 # apr_loan.rb
 require 'yaml'
-# Assignment: Mortgage / Car Loan Calculator
-# Take everything you've learned so far and
-# build a mortgage calculator (or car payment
-#   calculator -- it's the same thing).
-
-# You'll need three pieces of information:
-
-# the loan amount
-# the Annual Percentage Rate (APR)
-# the loan duration
-# From the above, you'll need to
-# calculate the following things:
-
-# monthly interest rate
-# loan duration in months
-# monthly payment
-# You can use the following formula:
-
-# Mortgage Calculator Formula
-
-# Translated to Ruby, this is what
-# the formula looks like:
-
-# m = p * (j / (1 - (1 + j)**(-n)))
-# m = monthly payment
-# p = loan amount
-# j = monthly interest rate
-# n = loan duration in months
-# When you write your program, don't use
-# the single-letter variables m, p, j, and
-# n; use explicit names. For instance,
-# you may want to use loan_amount instead
-# of p.
-
-# Finally, don't forget to run your code
-# through Rubocop.
-
-# Hints:
-
-# Figure out what format your inputs need
-# to be in. For example, should the interest
-# rate be expressed as 5 or .05, if you mean
-# 5% interest?
-# If you're working with Annual Percentage
-# Rate (APR), you'll need to convert that to
-# a monthly interest rate.
-# Be careful about the loan duration -- are
-# you working with months or years? Choose
-# variable names carefully to assist in
-# remembering.
 
 RESPONSES = YAML.safe_load(File.read("calculator_response.yml"))
 
 LANGUAGE = 'en'
 
-def messages(message, lang='en')
+def messages(message, lang = LANGUAGE)
   RESPONSES[lang][message]
 end
 
@@ -78,7 +28,7 @@ prompt('welcome')
 name = ''
 loop do
   name = gets.chomp
-  if /[0-9\s\W\_]+/.match(name) || name.empty?
+  if /[0-9\W\_]+/.match(name) || name.empty?
     prompt('valid_name')
   else
     puts format(messages('greeting'), name: name)
@@ -135,7 +85,7 @@ loop do
                                           loan_amount: loan_amount)
 
   puts "=> With a #{month_rate.round(4) * 100}% monthly interest rate."
-  puts "=> Your loan duration in months is #{months.to_i}."
+  puts "=> Your loan duration is #{months.to_i} months."
 
   prompt('another')
   answer = Kernel.gets().chomp()
