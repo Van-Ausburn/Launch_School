@@ -14,7 +14,7 @@
 # leap year, or false if it is not a leap year.
 
 def leap_year?(year)
-  year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+  (year % 4 == 0 && year % 100 != 0) || year % 400 == 0
 end
 
 p leap_year?(2016) #== true
@@ -30,3 +30,9 @@ p leap_year?(1700) #== false
 p leap_year?(1) #== false
 p leap_year?(100) #== false
 p leap_year?(400) #== true
+
+# Henrys-iMac:easy_4 henry$ rubocop exercise_3.rb
+# For more information: https://docs.rubocop.org/rubocop/versioning.html
+# Inspecting 1 file
+
+# 1 file inspected, no offenses detected
