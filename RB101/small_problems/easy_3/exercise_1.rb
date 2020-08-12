@@ -33,9 +33,8 @@ array_of_int << number5
 prompt("Enter the 6th number:")
 number6 = gets.chomp.to_i
 
-
 if array_of_int.include?(number6)
   prompt("The number #{number6} appears in #{array_of_int}.")
 else
- prompt("The number #{number6} does not appear in #{array_of_int}!")
+  prompt("The number #{number6} does not appear in #{array_of_int}!")
 end
